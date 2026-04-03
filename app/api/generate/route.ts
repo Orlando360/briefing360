@@ -3,7 +3,7 @@ import { PROMPT_IA, PROMPT_MKT } from '@/lib/prompts'
 import { streamClaudeWithRetry } from '@/lib/claude'
 
 export const runtime = 'edge'
-export const maxDuration = 60
+export const maxDuration = 300
 
 export async function POST(req: NextRequest) {
   const authHeader = req.headers.get('authorization')

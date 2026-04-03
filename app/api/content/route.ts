@@ -3,7 +3,7 @@ import { PROMPT_CONTENIDO } from '@/lib/prompt-content'
 import { streamClaudeWithRetry } from '@/lib/claude'
 
 export const runtime   = 'edge'
-export const maxDuration = 60
+export const maxDuration = 300
 
 /* ── RSS fetcher ──────────────────────────────────────── */
 async function fetchRSSNews(query: string, max = 6): Promise<string[]> {
