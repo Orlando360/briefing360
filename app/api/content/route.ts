@@ -107,8 +107,9 @@ export async function POST(req: NextRequest) {
 
         send({ done: true, generado_en: new Date().toISOString(), chars: full.length })
       } catch (err: unknown) {
-        const e = err as { message?: string }
-        send({ error: e?.message || 'Error al generar' })
+        const message = err instanceof Error ? err.message : 'Error desconocido al generar el contenido'
+        console.error('[content] Anthropic error:', message)
+        send({ error: message, done: true })
       } finally {
         controller.close()
       }
