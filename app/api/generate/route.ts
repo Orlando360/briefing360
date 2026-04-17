@@ -43,8 +43,8 @@ export async function POST(req: NextRequest) {
         // re-send the conversation so Claude can continue from where it left off.
         for (let iteration = 0; iteration < 5; iteration++) {
           const claudeStream = await streamClaudeWithRetry({
-            model: 'claude-opus-4-6',
-            max_tokens: 8000,
+            model: 'claude-opus-4-7',
+            max_tokens: 11200,
             thinking: { type: 'adaptive' },
             messages,
             tools: [WEB_SEARCH_TOOL],
