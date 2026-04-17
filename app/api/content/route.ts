@@ -93,8 +93,8 @@ export async function POST(req: NextRequest) {
       try {
         let full = ''
         const aStream = await streamClaudeWithRetry({
-          model:      'claude-sonnet-4-20250514',
-          max_tokens: 4000,
+          model:      'claude-opus-4-7',
+          max_tokens: 5600,
           messages:   [{ role: 'user', content: prompt }],
         })
 
