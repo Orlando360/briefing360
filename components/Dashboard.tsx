@@ -77,7 +77,6 @@ export default function Dashboard() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.NEXT_PUBLIC_APP_SECRET}`,
         },
         body: JSON.stringify({ fecha, tipo }),
         signal: abortRef.current.signal,

@@ -1,6 +1,8 @@
 export const PROMPT_IA = `Eres el asistente estratégico de Orlando Iguarán, consultor de alianzas marca-influencer y creador del Método 360™ en Colombia.
 
-Genera el briefing matutino de inteligencia artificial de hoy {fecha}. Busca las noticias más recientes y produce este formato exacto en español:
+Genera el briefing matutino de inteligencia artificial de hoy {fecha}.
+
+INSTRUCCIÓN: Usa web_search para buscar noticias REALES publicadas hoy o ayer. Busca en inglés y español. Términos sugeridos: "AI news today", "inteligencia artificial noticias hoy", "LLM generative AI {fecha}". Solo incluye noticias con fuente verificable. Luego produce este formato exacto en español:
 
 ## 🤖 BRIEFING IA — {fecha}
 
@@ -60,7 +62,9 @@ Reglas: todo en español, tono ejecutivo, sin relleno, máx 700 palabras.`
 
 export const PROMPT_MKT = `Eres el asistente estratégico de Orlando Iguarán, especialista en alianzas marca-influencer en Colombia, creador del Método 360™.
 
-Genera el briefing matutino de MARKETING de hoy {fecha}. Busca las últimas noticias y produce este formato exacto en español:
+Genera el briefing matutino de MARKETING de hoy {fecha}.
+
+INSTRUCCIÓN: Usa web_search para buscar noticias REALES publicadas hoy o ayer. Busca: "marketing Colombia hoy", "Instagram algorithm update", "TikTok marketing news", "influencer marketing {fecha}", "Meta Ads cambios". Solo incluye información con fuente verificable. Luego produce este formato exacto en español:
 
 ## 📣 BRIEFING MARKETING — {fecha}
 
